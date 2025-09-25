@@ -6,8 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1ED519762E850B1500CCD7FB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED519752E850B1500CCD7FB /* Alamofire */; };
+		1ED519B02E850EA300CCD7FB /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED519AF2E850EA300CCD7FB /* Moya */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1ED519A22E850DFC00CCD7FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ED518EB2E85042D00CCD7FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ED518F22E85042D00CCD7FB;
+			remoteInfo = PersonalArchive;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1ED518F32E85042D00CCD7FB /* PersonalArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED5199E2E850DFC00CCD7FB /* PersonalArchiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalArchiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,10 +45,24 @@
 			path = PersonalArchive;
 			sourceTree = "<group>";
 		};
+		1ED5199F2E850DFC00CCD7FB /* PersonalArchiveTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PersonalArchiveTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1ED518F02E85042D00CCD7FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED519762E850B1500CCD7FB /* Alamofire in Frameworks */,
+				1ED519B02E850EA300CCD7FB /* Moya in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED5199B2E850DFC00CCD7FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				1ED518F52E85042D00CCD7FB /* PersonalArchive */,
+				1ED5199F2E850DFC00CCD7FB /* PersonalArchiveTests */,
+				1ED519AE2E850E9800CCD7FB /* Frameworks */,
 				1ED518F42E85042D00CCD7FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +86,16 @@
 			isa = PBXGroup;
 			children = (
 				1ED518F32E85042D00CCD7FB /* PersonalArchive.app */,
+				1ED5199E2E850DFC00CCD7FB /* PersonalArchiveTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1ED519AE2E850E9800CCD7FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,10 +118,35 @@
 			);
 			name = PersonalArchive;
 			packageProductDependencies = (
+				1ED519752E850B1500CCD7FB /* Alamofire */,
+				1ED519AF2E850EA300CCD7FB /* Moya */,
 			);
 			productName = PersonalArchive;
 			productReference = 1ED518F32E85042D00CCD7FB /* PersonalArchive.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1ED5199D2E850DFC00CCD7FB /* PersonalArchiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED519A42E850DFC00CCD7FB /* Build configuration list for PBXNativeTarget "PersonalArchiveTests" */;
+			buildPhases = (
+				1ED5199A2E850DFC00CCD7FB /* Sources */,
+				1ED5199B2E850DFC00CCD7FB /* Frameworks */,
+				1ED5199C2E850DFC00CCD7FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ED519A32E850DFC00CCD7FB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1ED5199F2E850DFC00CCD7FB /* PersonalArchiveTests */,
+			);
+			name = PersonalArchiveTests;
+			packageProductDependencies = (
+			);
+			productName = PersonalArchiveTests;
+			productReference = 1ED5199E2E850DFC00CCD7FB /* PersonalArchiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +161,10 @@
 					1ED518F22E85042D00CCD7FB = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
+					1ED5199D2E850DFC00CCD7FB = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 1ED518F22E85042D00CCD7FB;
+					};
 				};
 			};
 			buildConfigurationList = 1ED518EE2E85042D00CCD7FB /* Build configuration list for PBXProject "PersonalArchive" */;
@@ -107,18 +176,30 @@
 			);
 			mainGroup = 1ED518EA2E85042D00CCD7FB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1ED519742E850B1500CCD7FB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1ED519792E850B2800CCD7FB /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1ED518F42E85042D00CCD7FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1ED518F22E85042D00CCD7FB /* PersonalArchive */,
+				1ED5199D2E850DFC00CCD7FB /* PersonalArchiveTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1ED518F12E85042D00CCD7FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED5199C2E850DFC00CCD7FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +216,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1ED5199A2E850DFC00CCD7FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1ED519A32E850DFC00CCD7FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ED518F22E85042D00CCD7FB /* PersonalArchive */;
+			targetProxy = 1ED519A22E850DFC00CCD7FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1ED519072E85042D00CCD7FB /* Debug */ = {
@@ -148,6 +244,8 @@
 				DEVELOPMENT_TEAM = 39742PQ3B3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalArchive/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "걸음 수 데이터를 사용하기 위해 HealthKit 권한이 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "걸음 수 데이터를 업데이트하기 위해 HealthKit 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -180,6 +278,8 @@
 				DEVELOPMENT_TEAM = 39742PQ3B3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalArchive/Info.plist;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "걸음 수 데이터를 사용하기 위해 HealthKit 권한이 필요합니다.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "걸음 수 데이터를 업데이트하기 위해 HealthKit 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,6 +423,48 @@
 			};
 			name = Release;
 		};
+		1ED519A52E850DFC00CCD7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39742PQ3B3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezyeun.PersonalArchiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalArchive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PersonalArchive";
+			};
+			name = Debug;
+		};
+		1ED519A62E850DFC00CCD7FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39742PQ3B3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ezyeun.PersonalArchiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalArchive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PersonalArchive";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,7 +486,48 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1ED519A42E850DFC00CCD7FB /* Build configuration list for PBXNativeTarget "PersonalArchiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED519A52E850DFC00CCD7FB /* Debug */,
+				1ED519A62E850DFC00CCD7FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1ED519742E850B1500CCD7FB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		1ED519792E850B2800CCD7FB /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1ED519752E850B1500CCD7FB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ED519742E850B1500CCD7FB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1ED519AF2E850EA300CCD7FB /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ED519792E850B2800CCD7FB /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1ED518EB2E85042D00CCD7FB /* Project object */;
 }

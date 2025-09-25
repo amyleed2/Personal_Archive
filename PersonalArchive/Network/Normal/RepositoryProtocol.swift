@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol RepositoryProtocol {
+    func sampleAPI2(query: String) async throws -> SampleDTO
+}
